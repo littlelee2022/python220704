@@ -1,9 +1,6 @@
 # function3.py
 # 교집합 함수
 
-from re import X
-
-
 def intersection(prelist, postlist):
     result = []
     for x in prelist:
@@ -35,6 +32,10 @@ print(id(a))
 a = 2.3
 print(id(a))
 
+strA = "a"
+print(id(strA))
+strA = "b"
+print(id(strA))
 
 
 
