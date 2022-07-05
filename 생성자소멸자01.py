@@ -6,3 +6,9 @@ class MyClass:
     def __del__(self):
         print("Instance is deleted!")
 
+# 인스턴스 생성
+d = MyClass(5)
+
+# del d
+
+print("전체 코드 실행 종료")

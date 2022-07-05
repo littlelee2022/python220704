@@ -9,8 +9,18 @@ class Person:
     
     # 인스턴스 메서드
     def print(self):
-        printf("My name is {0}".format(self.name))
+        print("My name is {0}".format(self.name))
 
 # 2) 인스턴스 생성
 p1 = Person()
+p2 = Person()
+p2.name = "전우치"
+#3) 메서드 호출
 p1.print()
+p2.print()
+
+# 런타임 (실행시간)에 변수를 추가 ==> 동적 형식의 언어
+Person.title = "new title"
+print(p1.title)
+print(p2.title)
+print(Person.title)
