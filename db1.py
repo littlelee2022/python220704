@@ -15,6 +15,16 @@ cur.execute("create table PhoneBook(Name text, PhoneNum text);")
 #1건 입력
 cur.execute("insert into PhoneBook values ('derick','010-222');")
 
+# 입력파라미터 처리
+name = "gildong"
+phoneNumber = "010-432"
+
+cur.execute("insert into PhoneBook values (?,?);", (name, phoneNumber))
+
+# 다중 레코드 입력(2차원 배열, 행열데이터)
+datalist = (("tom", "010-345"),("dsp","010-333"))
+cur.executemany("insert into PhoneBook values (?,?);", datalist)
+
 #검색
 cur.execute("select * from PhoneBook;")
 
