@@ -6,17 +6,17 @@ import sqlite3
 import os.path 
 
 #DB파일이 없으면 만들고 있다면 접속한다. 
-if os.path.exists("c:\\work\\ProductList.db"):
-    con = sqlite3.connect("c:\\work\\ProductList.db")
+if os.path.exists("c:\\python_work\\ProductList.db"):
+    con = sqlite3.connect("c:\\python_work\\ProductList.db")
     cur = con.cursor()
 else: 
-    con = sqlite3.connect("c:\\work\\ProductList.db")
+    con = sqlite3.connect("c:\\python_work\\ProductList.db")
     cur = con.cursor()
     cur.execute(
         "create table Products (id integer primary key autoincrement, Name text, Price integer);")
 
 #디자인 파일을 로딩
-form_class = uic.loadUiType("c:\\work\\ProductList.ui")[0]
+form_class = uic.loadUiType("c:\\python_work\\ProductList.ui")[0]
 
 class Window(QMainWindow, form_class):
     def __init__(self):
